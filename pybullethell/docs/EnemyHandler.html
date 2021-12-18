@@ -46,7 +46,14 @@
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt><a href="#Enemy">Enemy</a>(x,&nbsp;y,&nbsp;other)<br>
 &nbsp;<br>
-Класс&nbsp;врага<br>&nbsp;</tt></td></tr>
+Класс&nbsp;врага&nbsp;<br>
+&nbsp;<br>
+Attibutes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;Ширина&nbsp;графики&nbsp;в&nbsp;пикселях<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;Высота&nbsp;графики&nbsp;в&nbsp;пикселях<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x:&nbsp;Координата&nbsp;по&nbsp;оси&nbsp;Х<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y:&nbsp;Координата&nbsp;по&nbsp;оси&nbsp;Y<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cooldown:&nbsp;Время&nbsp;перезарядки&nbsp;выстрела&nbsp;на&nbsp;данный&nbsp;момент<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
 <dl><dt><a name="Enemy-__init__"><strong>__init__</strong></a>(self, x, y, other)</dt><dd><tt>Конструктор&nbsp;класса,&nbsp;принимает&nbsp;значения&nbsp;начальной&nbsp;позиции,&nbsp;а&nbsp;так&nbsp;же&nbsp;тип&nbsp;врага</tt></dd></dl>
@@ -82,7 +89,14 @@ Data and other attributes defined here:<br>
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt><a href="#EnemySpawner">EnemySpawner</a>(max_x,&nbsp;max_y)<br>
 &nbsp;<br>
-Класс&nbsp;для&nbsp;создания&nbsp;врагов<br>&nbsp;</tt></td></tr>
+Класс&nbsp;для&nbsp;создания&nbsp;врагов<br>
+&nbsp;<br>
+Attibutes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enemies:&nbsp;Лист&nbsp;созданных&nbsp;врагов<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enemy_types:&nbsp;Лист&nbsp;типов&nbsp;врагов<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;min_cooldown_time:&nbsp;Минимальное&nbsp;количество&nbsp;времени&nbsp;для&nbsp;создание&nbsp;врага<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_cooldown_time:&nbsp;Максимальное&nbsp;количество&nbsp;времени&nbsp;для&nbsp;создание&nbsp;врага<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cooldown:&nbsp;Время&nbsp;на&nbsp;данный&nbsp;момент<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
 <dl><dt><a name="EnemySpawner-Shoot"><strong>Shoot</strong></a>(self)</dt><dd><tt>Метод&nbsp;нужен&nbsp;для&nbsp;выстрела&nbsp;пули</tt></dd></dl>
