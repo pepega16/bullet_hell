@@ -1,0 +1,221 @@
+	
+builtins.object
+Enemy
+EnemySpawner
+EnemyType
+ 
+class Enemy(builtins.object)
+   	Enemy(x, y, other)
+ 
+Класс врага
+ 
+ 	Methods defined here:
+__init__(self, x, y, other)
+Конструктор класса, принимает значения начальной позиции, а так же тип врага
+shoot(self)
+Метод создаёт пулю для выстрела и возращяет её как объект
+Data descriptors defined here:
+__dict__
+dictionary for instance variables (if defined)
+__weakref__
+list of weak references to the object (if defined)
+Data and other attributes defined here:
+cooldown = 0
+height = 90
+width = 90
+x = 0
+y = 0
+ 
+class EnemySpawner(builtins.object)
+   	EnemySpawner(max_x, max_y)
+ 
+Game
+ 
+class Game(builtins.object)
+   	Класс предназначен для главного игрового процесса
+  	
+builtins.object
+Player
+ 
+class Player(builtins.object)
+   	Player(spawn_point)
+ 
+Класс персонажа
+ 
+ 	Methods defined here:
+__init__(self, spawn_point)
+Конструтор для класса, принимает точку возраждения персонажа
+reset(self)
+Метод для сброса атрибуто персонажа
+shoot(self)
+Метод создаёт пулю для выстрела и возращяет её как объект
+Data descriptors defined here:
+__dict__
+dictionary for instance variables (if defined)
+__weakref__
+list of weak references to the object (if defined)
+Data and other attributes defined here:
+cooldown = 0
+default_cooldown = 20
+health = 100
+height = 90
+speed = 10
+ 	Methods defined here:
+GameLoop(self)
+Гланый метод игрового цикла
+__init__(self)
+Этот метод является конструктором класса
+bullets_movement(self)
+Этот метод двигает все пули
+check_bullets(self)
+Этот метод проверяет коллизию пули с другими объектами
+Коллизия с игроком либо врагом отнимает ему здоровье и пуля удаляется
+check_enemies(self, bullet)
+Этот метод проверяет коллизию пули с врагами
+draw_display(self)
+Метод рисует графику
+game_over(self)
+Метод рисует графику для конца игры
+key_action(self)
+Метод нужен для взаимодествия игроком с дввижением персонажа
+player_alive(self)
+Этот метод проверяет жив ли игрок
+print_text(self, message, x, y, font_color=(255, 255, 255), font_type='fonts/font.ttf', font_size=40)
+Этот метод используется для того, чтобы написать текст на экране, принимает значения текста и координаты
+restart(self)
+Метод нужен для перезапуска игры при нажатии игроком определенной клавиши
+Data descriptors defined here:
+__dict__
+dictionary for instance variables (if defined)
+__weakref__
+list of weak references to the object (if defined)
+Data and other attributes defined here:
+backgorund_speed = 1
+background_position = 0
+bullets = []
+caption = 'Bullet Hell'
+display_height = 960
+Класс для создания врагов
+ 
+ 	Methods defined here:
+Shoot(self)
+Метод нужен для выстрела пули
+__init__(self, max_x, max_y)
+Конструктор класса, принимает значения минимального и максимального времени между созданием врагов
+move(self)
+Метод двигает врага в определённом напралвении
+spawn(self)
+Метод создаёт врага в определённом временном интервале
+Data descriptors defined here:
+__dict__
+dictionary for instance variables (if defined)
+__weakref__
+list of weak references to the object (if defined)
+Data and other attributes defined here:
+cooldown = 0
+enemies = []
+enemy_types = []
+max_cooldown_time = 150
+min_cooldown_time = 50
+ 
+class EnemyType(builtins.object)
+   	EnemyType(health, cooldown, speed, sprite, bullet_spite, heal=False)
+ 
+Класс для определения типа врагов
+ 
+ 	Methods defined here:
+__init__(self, health, cooldown, speed, sprite, bullet_spite, heal=False)
+Конструктор для класса, принимает здороввье, время перезарядки, скорость передвижения,
+графику, графику пули и является ли враг лечительным
+Data descriptors defined here:
+__dict__
+dictionary for instance variables (if defined)
+builtins.object
+Bullet
+enum.Enum(builtins.object)
+Direction
+ 
+class Bullet(builtins.object)
+   	Bullet(spawn_point, sprite, side, if_player=False)
+ 
+ 	
+builtins.object
+Bullet
+enum.Enum(builtins.object)
+Direction
+ 
+class Bullet(builtins.object)
+   	Bullet(spawn_point, sprite, side, if_player=False)
+ 
+
+ 
+ 	Methods defined here:
+__init__(self, spawn_point, sprite, side, if_player=False)
+Initialize self.  See help(type(self)) for accurate signature.
+move(self)
+Data descriptors defined here:
+__dict__
+dictionary for instance variables (if defined)
+__weakref__
+list of weak references to the object (if defined)
+Data and other attributes defined here:
+damage = 25
+speed = 10
+ 
+class Direction(enum.Enum)
+   	Direction(value, names=None, *, module=None, qualname=None, type=None, start=1)
+ 
+Энумиратор прдназначенный для напраления пуль
+ 
+ 	
+Method resolution order:
+Direction
+enum.Enum
+builtins.object
+Data and other attributes defined here:
+DOWN = <Direction.DOWN: -1>
+UP = <Direction.UP: 1>
+Data descriptors inherited from enum.Enum:
+name
+The name of the Enum member.
+value
+The value of the Enum member.
+Readonly properties inherited from enum.EnumMeta:
+__members__
+Returns a mapping of member name->value.
+ PlaySound(sound_file_name, channel, flag=0)
+Функция предназначенна для проигрывания аудиозаписиб принимает назание файла, канал и флаг
+ 	Methods defined here:
+__init__(self, spawn_point, sprite, side, if_player=False)
+Initialize self.  See help(type(self)) for accurate signature.
+move(self)
+Data descriptors defined here:
+__dict__
+dictionary for instance variables (if defined)
+__weakref__
+list of weak references to the object (if defined)
+Data and other attributes defined here:
+damage = 25
+speed = 10
+ 
+class Direction(enum.Enum)
+   	Direction(value, names=None, *, module=None, qualname=None, type=None, start=1)
+ 
+Энумиратор прдназначенный для напраления пуль
+ 
+ 	
+Method resolution order:
+Direction
+enum.Enum
+builtins.object
+Data and other attributes defined here:
+DOWN = <Direction.DOWN: -1>
+UP = <Direction.UP: 1>
+Data descriptors inherited from enum.Enum:
+name
+The name of the Enum member.
+value
+The value of the Enum member.
+Readonly properties inherited from enum.EnumMeta:
+__members__
+Returns a mapping of member name->value.
